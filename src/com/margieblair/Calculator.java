@@ -5,8 +5,7 @@ public class Calculator {
 
 
     public static int attack(int ac, int defenseMod, int attackMod, String damageDice) {
-        //this method should return the damage
-        //AC stands for armor class and is an integer
+
         Die twentySided = new Die(20);
         Die damageDie = new Die(4);
         Random rand = new Random();
