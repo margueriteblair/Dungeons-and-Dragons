@@ -4,13 +4,13 @@ import java.util.Random;
 public class Calculator {
 
 
-    public int attack(int ac, int defenseMod, int attackMod, String damageDice) {
+    public static int attack(int ac, int defenseMod, int attackMod, String damageDice) {
         //this method should return the damage
         //AC stands for armor class and is an integer
-        Die die = new Die(20);
+        Die twentySided = new Die(20);
         Die damageDie = new Die(4);
         Random rand = new Random();
-        int hit = damageDie.roll(rand);
+        int hit = twentySided.roll(rand);
         if (hit == 20) {
             int firstRoll = damageDie.roll(rand);
             int secondRoll = damageDie.roll(rand);
