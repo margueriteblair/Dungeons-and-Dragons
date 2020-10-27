@@ -16,7 +16,7 @@ public class Main {
             int defenseMod = scanner.nextInt();
             Die damageDie = new Die(4);
             int attackMod = (damageDie.roll(random)) * 2;
-            Calculator.attack(ac, defenseMod, attackMod, "hi");
+            Calculator.attack(ac, defenseMod, attackMod, "2d4");
         }
     }
 }
