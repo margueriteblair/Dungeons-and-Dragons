@@ -12,6 +12,7 @@ public class Calculator {
         Die damageDieHit = new Die(damageDieNumSides);
         Random rand = new Random();
         int hit = twentySided.roll(rand);
+        System.out.println("You rolled a " + hit);
         if (hit == 20) {
             int firstRoll = 0;
             for (int i = 0; i < numRolls; i++) {
@@ -35,6 +36,7 @@ public class Calculator {
         if (hit + attackMod > ac + defenseMod) {
             int totalDamage = damageDieHit.roll(rand);
             System.out.println("Hit " + totalDamage + " damage delt");
+            return totalDamage;
         }
         System.out.println("Miss 0 damage");
         return 0;
