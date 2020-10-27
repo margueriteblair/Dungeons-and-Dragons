@@ -6,8 +6,8 @@ public class Die {
     private int sides;
     private int face;
 
-    public Die() {
-        sides = 20;
+    public Die(int sides) {
+        this.sides = sides;
     }
 
     public int roll(Random rand) {
