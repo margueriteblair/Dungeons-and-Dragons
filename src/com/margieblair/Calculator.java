@@ -7,13 +7,21 @@ public class Calculator {
     public static int attack(int ac, int defenseMod, int attackMod, String damageDice) {
         int numRolls = Integer.parseInt(damageDice.split("d")[0]);
         int damageDieNumSides = Integer.parseInt(damageDice.split("d")[1]);
+
         Die twentySided = new Die(20);
         Die damageDieHit = new Die(damageDieNumSides);
         Random rand = new Random();
         int hit = twentySided.roll(rand);
         if (hit == 20) {
-            int firstRoll = damageDieHit.roll(rand);
-            int secondRoll = damageDieHit.roll(rand);
+            int firstRoll = 0;
+            for (int i = 0; i < numRolls; i++) {
+                firstRoll += damageDieHit.roll(rand);
+            }
+            int secondRoll = 0;
+            for (int i = 0; i < numRolls; i++) {
+                secondRoll += damageDieHit.roll(rand);
+            }
+
             int totalDamage = firstRoll + secondRoll;
             System.out.println("Critical Hit! " + firstRoll + " + " + secondRoll + " = " + totalDamage + " damage");
             return totalDamage;
