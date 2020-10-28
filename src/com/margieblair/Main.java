@@ -12,11 +12,13 @@ public class Main {
         while(true) {
             System.out.println("Player, input your Armor Class:");
             int ac = scanner.nextInt();
-            System.out.println("Great! Now input your defense Mod:");
+            System.out.println("Great! Now input your defense mod:");
             int defenseMod = scanner.nextInt();
-            Die damageDie = new Die(4);
-            int attackMod = (damageDie.roll(random)) * 2;
-            int damage = Calculator.attack(ac, defenseMod, attackMod, "2d4");
+            System.out.println("Input the attack mod:");
+            int attackMod = scanner.nextInt();
+            System.out.println("Please give us what kind of die you'll be rolling for damage hits: ");
+            String damageDice = scanner.next();
+            int damage = Calculator.attack(ac, defenseMod, attackMod, damageDice);
             System.out.println(damage);
         }
     }

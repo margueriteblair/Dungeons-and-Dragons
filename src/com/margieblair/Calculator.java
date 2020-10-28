@@ -12,7 +12,8 @@ public class Calculator {
         Die damageDieHit = new Die(damageDieNumSides);
         Random rand = new Random();
         int hit = twentySided.roll(rand);
-        System.out.println("You rolled a " + hit);
+        System.out.println("Enemy rolled a " + hit);
+        //make a try catch block with the numRolls and the catch portion will set numRolls = 1 if it's undefined
         if (hit == 20) {
             int firstRoll = 0;
             for (int i = 0; i < numRolls; i++) {
