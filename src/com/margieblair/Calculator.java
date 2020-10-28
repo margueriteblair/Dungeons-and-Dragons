@@ -5,7 +5,13 @@ public class Calculator {
 
 
     public static int attack(int ac, int defenseMod, int attackMod, String damageDice) {
-        int numRolls = Integer.parseInt(damageDice.split("d")[0]);
+        int temp;
+        try {
+            temp = Integer.parseInt(damageDice.split("d")[0]);
+        } catch (NumberFormatException ex) {
+            temp = 1;
+        }
+        int numRolls = temp;
         int damageDieNumSides = Integer.parseInt(damageDice.split("d")[1]);
 
         Die twentySided = new Die(20);
