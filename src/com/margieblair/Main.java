@@ -11,6 +11,7 @@ public class Main {
         Random random = new Random();
         while(true) {
             System.out.println("Player, input your Armor Class (Between 10-18):");
+
             int ac = scanner.nextInt();
             System.out.println("Great! Now input your defense mod (-50-50):");
             int defenseMod = scanner.nextInt();
