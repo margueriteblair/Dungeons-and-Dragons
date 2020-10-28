@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class CliLogic {
     static Scanner scanner = new Scanner(System.in);
 
-    public static String getString(String question, int min, int max) {
+    public static String getString(String question) {
         System.out.println(question);
-        return scanner.nextLine().trim().toLowerCase();
+        String die = scanner.next();
+        return die;
     }
 
     public static int getNumber(String question, int min, int max) {
@@ -20,6 +21,7 @@ public class CliLogic {
                 } else {
                     return mod;
                 }
+                System.out.println();
             } catch (IllegalArgumentException ex) {
                 System.out.println("Please only input a number within the bounds of the field.");
             }
