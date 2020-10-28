@@ -19,8 +19,8 @@ public class Calculator {
         Random rand = new Random();
         int hit = twentySided.roll(rand);
         System.out.println("Enemy rolled a " + hit);
-        //make a try catch block with the numRolls and the catch portion will set numRolls = 1 if it's undefined
         if (hit == 20) {
+            //you can also replicate the yahtzee scenario where you have a hand that rolls multiple die at once
             int firstRoll = 0;
             for (int i = 0; i < numRolls; i++) {
                 firstRoll += damageDieHit.roll(rand);

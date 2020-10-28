@@ -15,12 +15,5 @@ public class Die {
         return face;
     }
 
-    public int getSides() {
-        return sides;
-    }
-
-    public int getValue() {
-        return face;
-    }
 
 }
