@@ -19,7 +19,7 @@ public class Main {
             System.out.println("Please give us what kind of die you'll be rolling for damage hits format-{X}d{Y}: ");
             String damageDice = scanner.next();
             int damage = Calculator.attack(ac, defenseMod, attackMod, damageDice);
-            System.out.println(damage);
+            System.out.println(damage + " is the final total damage for this roll!");
         }
     }
 }
