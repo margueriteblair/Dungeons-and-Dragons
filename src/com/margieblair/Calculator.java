@@ -38,11 +38,6 @@ public class Calculator {
             return totalDamage;
         }
 
-        if (hit == 1) {
-            System.out.println("Critical Miss!");
-            return 0;
-        }
-
         if (hit + attackMod > ac + defenseMod) {
             int totalDamage = 0;
             for (int i = 0; i < numRolls; i++) {
@@ -51,6 +46,12 @@ public class Calculator {
             System.out.println("Hit " + totalDamage + " damage delt");
             return totalDamage;
         }
+
+        if (hit == 1) {
+            System.out.println("Critical Miss!");
+            return 0;
+        }
+
         System.out.println("Miss 0 damage");
         return 0;
     }
